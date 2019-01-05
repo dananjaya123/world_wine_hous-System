@@ -1,0 +1,83 @@
+
+<?php
+/**
+ * Created by PhpStorm.
+ * User: D max
+ * Date: 12/9/2018
+ * Time: 11:22 AM
+ */
+
+$connection = mysqli_connect("127.0.0.1","root","1234","sportclub","3306");
+
+$result =  mysqli_query($connection,"SELECT * FROM member");
+
+$temp = $result->fetch_all();
+
+echo json_encode($temp);
+
+
+
+=======================
+$("#btnLoadPakage").click(function () {
+
+Drop database world_wine_house;
+CREATE DATABASE world_wine_house;
+
+USE world_wine_house;
+
+CREATE TABLE Customer(
+	CustID VARCHAR(250)NOT NULL,
+	CustName VARCHAR(250)NOT NULL,
+	CustAddress VARCHAR(250),
+	CustPhoneNum VARCHAR(250),
+	CONSTRAINT PRIMARY KEY (CustID)
+);
+
+CREATE TABLE Payment(
+	PaymentID VARCHAR(250)NOT NULL,
+	Amount VARCHAR(250)NOT NULL,
+	PaymentDate VARCHAR(250)NOT NULL,
+	CONSTRAINT PRIMARY KEY (PaymentID)
+	
+);
+
+
+
+CREATE TABLE Item(
+	ItemCode VARCHAR(255) NOT NULL ,
+	Type VARCHAR(250) NOT NULL,
+	Countries VARCHAR(250) NOT NULL,
+	Brand VARCHAR(250) NOT NULL,
+	UnitPrice DECIMAL(10,2) NOT NULL,
+	Size VARCHAR(250) NOT NULL,
+	Age VARCHAR(250)NOT NULL,
+	ABV VARCHAR(250)NOT NULL,
+	CONSTRAINT PRIMARY KEY (ItemCode)
+);
+
+CREATE TABLE Orders(
+	OrderID VARCHAR(250)NOT NULL,
+	OrderDate VARCHAR (250),
+	OrderQTY INT(250),
+	CustID VARCHAR(250)NOT NULL,
+	PaymentID VARCHAR(250)NOT NULL,
+	CONSTRAINT PRIMARY KEY (OrderID),
+	CONSTRAINT FOREIGN KEY(CustID) REFERENCES Customer(CustID)
+	ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT FOREIGN KEY(PaymentID) REFERENCES Payment(PaymentID)
+	ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE OrderDetail(
+	OrderID VARCHAR(250) NOT NULL,
+	ItemCode VARCHAR(250) NOT NULL,
+	CONSTRAINT PRIMARY KEY (OrderID,ItemCode),
+	CONSTRAINT FOREIGN KEY(OrderID ) REFERENCES Orders(OrderID )
+	ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT FOREIGN KEY(ItemCode ) REFERENCES Item(ItemCode )
+	ON UPDATE CASCADE ON DELETE CASCADE
+
+	
+);
+
+

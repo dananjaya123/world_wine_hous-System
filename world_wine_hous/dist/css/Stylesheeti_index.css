@@ -1,0 +1,348 @@
+
+
+/*==============Nav==================================*/
+
+#name{
+    color: black;
+    font-family: 'Tangerine', cursive;
+
+}
+#nav01{
+    background-color: white;
+}
+
+
+/*==============slider==================================*/
+
+#image01{
+    width:50px;
+    height: 50px;
+
+}
+
+#nav{
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+}
+
+/*=========== card 01=============*/
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+
+
+figure.snip0057 {
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 380px;
+    max-width: 480px;
+    width: 100%;
+    background: #ffffff;
+    color: #000000;
+}
+figure.snip0057 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+figure.snip0057 .image {
+    width: 50%;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transform: skewX(-15deg);
+    transform: skewX(-15deg);
+}
+figure.snip0057 .image img {
+    position: relative;
+    display: block;
+    left: -15%;
+    z-index: 1;
+    -webkit-transform: skew(15deg);
+    transform: skew(15deg);
+}
+figure.snip0057:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 45%;
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-transform: skewX(-17deg);
+    transform: skewX(-17deg);
+    -webkit-box-shadow: 15px 0px 25px rgba(0, 0, 0, 0.7);
+    box-shadow: 15px 0px 25px rgba(0, 0, 0, 0.7);
+}
+figure.snip0057 figcaption {
+    padding: 20px 30px 20px 20px;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    width: 50%;
+}
+figure.snip0057 figcaption h2,
+figure.snip0057 figcaption p {
+    margin: 0;
+    text-align: right;
+    padding: 10px 0;
+    width: 100%;
+}
+figure.snip0057 figcaption h2 {
+    font-size: 1.3em;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+figure.snip0057 figcaption h2 span {
+    font-weight: 800;
+}
+figure.snip0057 figcaption p {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+figure.snip0057 figcaption .icons {
+    width: 100%;
+    text-align: right;
+}
+figure.snip0057 figcaption .icons i {
+    font-size: 26px;
+    padding: 5px;
+    top: 50%;
+    color: #000000;
+    opacity: 0;
+}
+figure.snip0057 figcaption a {
+    opacity: 0.3;
+}
+figure.snip0057 figcaption a:hover {
+    opacity: 0.8;
+}
+figure.snip0057 .position {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    padding: 15px 30px;
+    font-size: 0.9em;
+    opacity: 1;
+    font-style: italic;
+    color: #ffffff;
+    background: #000000;
+}
+figure.snip0057.blue .position {
+    background: #20638f;
+}
+figure.snip0057.red .position {
+    background: #962d22;
+}
+figure.snip0057.yellow .position {
+    background: #bf6516;
+}
+figure.snip0057:hover figcaption,
+figure.snip0057.hover figcaption {
+    bottom: 40px;
+}
+figure.snip0057:hover .icons i,
+figure.snip0057.hover .icons i {
+    opacity: 1;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+figure.snip0057:hover:before,
+figure.snip0057.hover:before {
+    -webkit-animation: shadow 0.6s ease-in-out;
+    animation: shadow 0.6s ease-in-out;
+}
+@-webkit-keyframes shadow {
+    0% {
+        left: 0px;
+    }
+    50% {
+        left: -5px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+@keyframes shadow {
+    0% {
+        left: 0px;
+    }
+    50% {
+        left: -5px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+/*=================card 02=========================*/
+
+/*@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");*/
+/*::-webkit-scrollbar {*/
+    /*display: none;*/
+/*}*/
+
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+    /*text-decoration: none;*/
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: #F2F2F2;
+}
+
+/*#wrap {*/
+    /*width: 85%;*/
+    /*height: auto;*/
+/*}*/
+#wrap .card {
+    width: 32%;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+    float: left;
+    position: relative;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+#wrap .card:nth-child(2) {
+    margin: 0 2%;
+}
+#wrap .card:hover .thumb {
+    top: -25%;
+}
+#wrap .card .thumb {
+    width: 90%;
+    height: 150px;
+    background: #000;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 50%;
+    top: -10%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 10;
+    -webkit-transition: 0.3s cubic-bezier(0.67, -0.12, 0.45, 1.5);
+    transition: 0.3s cubic-bezier(0.67, -0.12, 0.45, 1.5);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+}
+#wrap .card #one {
+    background-image: url(../image/s2.jpeg);
+}
+#wrap .card #two {
+    background-image: url(../image/m1.png);
+}
+#wrap .card #three {
+    background-image: url(../image/whitw.jpeg);
+}
+#wrap .card .option {
+    width: 60%;
+    height: 30px;
+    margin: 90px auto 0 auto;
+}
+#wrap .card .option i {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 5%;
+    color: #000000;
+    opacity: 0.6;
+    position: relative;
+}
+#wrap .card .option i:hover {
+    cursor: pointer;
+}
+#wrap .card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #000000;
+    opacity: 0.6;
+}
+#wrap .card hr {
+    width: 10%;
+    opacity: 0.5;
+    margin: 10px auto;
+}
+#wrap .card .price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4d4d4d;
+}
+#wrap .card .desc {
+    margin: 15px 0;
+    font-size: 13px;
+    line-height: 20px;
+    opacity: 0.8;
+}
+#wrap .card .add, #wrap .card .buy {
+    width: 48%;
+    height: 30px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+#wrap .card .add a, #wrap .card .buy a {
+    line-height: 30px;
+    font-size: 13px;
+    color: #fff;
+}
+#wrap .card .add {
+    float: left;
+    background: #FF9F00;
+}
+#wrap .card .add:hover {
+    background: #cc7f00;
+}
+#wrap .card .buy {
+    float: right;
+    background: #FB641B;
+}
+#wrap .card .buy:hover {
+    background: #df4b04;
+}
+
+@media screen and (max-width: 480px) {
+    #wrap {
+        top: 10%;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+    #wrap .card {
+        width: 100%;
+    }
+    /*#wrap .card:nth-child(2) {*/
+        /*margin: 50px 0;*/
+    /*}*/
+    #wrap .card:nth-child(3) {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+/*============================================*/
+#redWine{
+    display: none;
+}
+
+#roseWine{
+    display: none;
+
+}
+
+#whitWine{
+    display: none;
+}
+
